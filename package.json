@@ -1,17 +1,30 @@
 {
   "name": "kerliix-oauth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Kerliix OAuth SDK for Node.js and browser",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "node tests/client.test.js"
   },
-  "keywords": ["oauth2", "kerliix", "sdk", "authentication", "typescript"],
+  "keywords": [
+    "oauth2",
+    "kerliix",
+    "nodejs",
+    "sdk",
+    "authentication",
+    "typescript",
+    "oauth"
+  ],
   "author": "Kerliix Corporation",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerliix-corp/kerliix-oauth-nodejs.git"
+  },
   "devDependencies": {
     "typescript": "^5.6.3"
   }

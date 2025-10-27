@@ -2,9 +2,11 @@
 
 > Official Kerliix OAuth 2.0 SDK for Node.js and Browser
 
-[![npm version](https://img.shields.io/npm/v/kerliix-oauth.svg)](https://www.npmjs.com/package/kerliix-oauth)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build](https://img.shields.io/github/actions/workflow/status/kerliix/kerliix-oauth/build.yml)](https://github.com/kerliix/kerliix-oauth/actions)
+[![npm version](https://img.shields.io/npm/v/kerliix-oauth.svg?style=flat-square)](https://www.npmjs.com/package/kerliix-oauth)
+[![Downloads](https://img.shields.io/npm/dt/kerliix-oauth?style=flat-square)](https://www.npmjs.com/package/kerliix-oauth)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://github.com/kerliix-corp/kerliix-oauth-nodejs/blob/main/LICENSE)
+[![Build Status](https://github.com/kerliix-corp/kerliix-oauth-nodejs/actions/workflows/build.yml/badge.svg)](https://github.com/kerliix-corp/kerliix-oauth-nodejs/actions)
+[![Node.js Version](https://img.shields.io/node/v/kerliix-oauth?style=flat-square)](https://www.npmjs.com/package/kerliix-oauth)
 
 ---
 
@@ -46,7 +48,7 @@ const client = new KerliixOAuth({
   clientId: "YOUR_CLIENT_ID",
   clientSecret: "YOUR_CLIENT_SECRET",
   redirectUri: "https://yourapp.com/callback",
-  baseUrl: "https://auth.kerliix.com"
+  baseUrl: "https://api.kerliix.com"
 });
 
 // Step 1: Redirect user to login
@@ -73,7 +75,7 @@ console.log("Login via:", authUrl);
 
 ---
 
-## 🔐 OAuth Flow
+## OAuth Flow
 
 1. **User clicks login** → Redirect to Kerliix via `getAuthUrl()`
 2. **Kerliix authenticates** → Redirects back with `?code=XYZ`
@@ -94,7 +96,7 @@ const client = new KerliixOAuth({
   clientId: "...",
   clientSecret: "...",
   redirectUri: "...",
-  baseUrl: "https://auth.kerliix.com"
+  baseUrl: "https://api.kerliix.com"
 });
 ```
 

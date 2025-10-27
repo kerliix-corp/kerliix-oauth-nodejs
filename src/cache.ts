@@ -10,9 +10,15 @@ export class TokenCache {
 
   get(): TokenResponse | null {
     if (!this.tokenData) return null;
+
     const now = Math.floor(Date.now() / 1000);
     const expiry = (this.tokenData.created_at || 0) + (this.tokenData.expires_in || 0);
-    if (now >= expiry - 30) return null; // refresh 30s early
+
+    if (now >= expiry - 30) {
+      console.warn("TokenCache: token expired or near expiry");
+      return null;
+    }
+
     return this.tokenData;
   }
 
