@@ -21,3 +21,13 @@ export interface UserInfo {
   picture?: string;
   [key: string]: any;
 }
+
+// Custom OAuth error class for developers
+export class OAuthError extends Error {
+  code: string;
+  constructor(code: string, message?: string) {
+    super(message || code);
+    this.code = code;
+    this.name = "OAuthError";
+  }
+}

@@ -15,8 +15,7 @@ export class TokenCache {
     const expiry = (this.tokenData.created_at || 0) + (this.tokenData.expires_in || 0);
 
     if (now >= expiry - 30) {
-      console.warn("TokenCache: token expired or near expiry");
-      return null;
+      return null; // expired or near expiry
     }
 
     return this.tokenData;
